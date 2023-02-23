@@ -28,22 +28,64 @@ class Employee {
         this.totalHours = totalHours;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
     public long getSalary() {
+        return salary;
+    }
+
+    public void setTotalHours(long totalHours) {
+        this.totalHours = totalHours;
+    }
+
+    public long getTotalHours() {
+        return totalHours;
+    }
+
+    public long getBonus() {
         if(totalHours >= 200) {
-            return salary + salary*2;
+            return salary*2;
         } else if(totalHours < 100) {
-            return salary;
+            return 0;
         } else {
-            return salary + salary*10/100;
+            return salary*10/100;
         }
     }
 
     public void Display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Address: " + address);
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Address: " + getAddress());
         System.out.println("Salary: " + getSalary());
-        System.out.println("Total hours: " + totalHours);
+        System.out.println("Total hours: " + getTotalHours());
+        System.out.println("Bonus: " + getBonus());
+        System.out.println("Total salary: " + (getSalary() + getBonus()));
     }
 }
 
