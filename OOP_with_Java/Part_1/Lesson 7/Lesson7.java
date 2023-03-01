@@ -57,12 +57,12 @@ class Fraction {
         this.denominator = b*d;
     }
 
-    public void divFraction(float a, float b, float c, float d) {
+    public void mulFraction(float a, float b, float c, float d) {
         this.numerator = a*c;
         this.denominator = b*d;
     }
 
-    public void mulFraction(float a, float b, float c, float d) {
+    public void divFraction(float a, float b, float c, float d) {
         this.numerator = a*d;
         this.denominator = b*c;
     }
